@@ -1,2 +1,388 @@
-/* This is a place where final css file should be. */
+body {
+  color: #FFFFFF;
+  background-color: #101010;
+  font-family: "Roboto", sans-serif;
+}
 
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.region.region-header {
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 10em;
+}
+.region.region-header #block-adchallenge-branding {
+  display: flex;
+  align-items: center;
+}
+.region.region-header #block-adchallenge-branding .site-logo img {
+  height: 2.5em;
+}
+.region.region-header #block-adchallenge-branding .site-slogan {
+  margin-left: 1em;
+}
+.region.region-header .menu {
+  display: flex;
+  margin-right: 1em;
+}
+.region.region-header .menu .menu-item {
+  margin: 0 1em;
+  padding-top: 0;
+}
+.region.region-header .menu .menu-item:last-child {
+  margin-right: 0;
+}
+.region.region-header .menu .menu-item a {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: solid 2px transparent;
+  font-size: 0.75em;
+  padding-bottom: 0.5em;
+}
+.region.region-header .menu .menu-item a:hover, .region.region-header .menu .menu-item a:active, .region.region-header .menu .menu-item a:focus {
+  border-bottom-color: #0097A7;
+}
+.region.region-content #block-top-content-header {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: 7em;
+}
+.region.region-content #block-top-content-header .container {
+  z-index: 2;
+  position: relative;
+}
+.region.region-content #block-top-content-header::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.region.region-content #block-top-content-header h1 {
+  font-weight: 100;
+}
+.region.region-content #block-top-content-header h2 {
+  margin-top: 0;
+  font-weight: 100;
+  font-size: 0.85em;
+  border-bottom: 1px solid #949494;
+  display: inline-block;
+  padding-bottom: 1.5em;
+  padding-top: 5em;
+  margin-bottom: 0em;
+}
+.region.region-content #block-top-content-header a {
+  display: inline-block;
+  background-color: #FF5252;
+  padding: 1.35em 3.5em;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.6em;
+  text-transform: uppercase;
+  border: #FF5252 solid 1px;
+}
+.region.region-content #block-top-content-header a:hover {
+  background-color: transparent;
+  border-color: #FFFFFF;
+}
+.region.region-content #block-adchallenge-content {
+  padding: 5em 10em;
+}
+.region.region-content #block-adchallenge-content > h2 {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 100;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.75em;
+}
+.region.region-content #block-adchallenge-content > h2:after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #0097A7;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.region.region-content #block-adchallenge-content .view-content {
+  display: flex;
+}
+.region.region-content #block-adchallenge-content .view-content .views-row:nth-child(even) {
+  margin: 0 2em;
+}
+.region.region-content #block-adchallenge-content .view-content .views-row h2 {
+  border: transparent;
+  padding-bottom: 0;
+  margin-bottom: 0.25em;
+  font-size: 1.1em;
+}
+.region.region-content #block-adchallenge-content .view-content .views-row h2 a {
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.region.region-content #block-adchallenge-content .view-content .views-row .createdDate {
+  color: #949494;
+  font-size: 0.6em;
+  padding-bottom: 2em;
+}
+.region.region-content #block-adchallenge-content .view-content .views-row .field img {
+  width: 100%;
+  height: 100%;
+}
+.region.region-content #block-adchallenge-content .view-content .views-row .field p {
+  color: #949494;
+  font-size: 0.75em;
+  line-height: 2em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.region.region-content #block-adchallenge-content .view-content .views-row .node__links {
+  margin-top: 1.5em;
+}
+.region.region-content #block-adchallenge-content .view-content .views-row .node__links li {
+  padding-left: 0;
+}
+.region.region-content #block-adchallenge-content .view-content .views-row .node__links li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+.region.region-content #block-adchallenge-content .view-content .views-row .node__links li a:hover:after {
+  color: #FF5252;
+}
+.region.region-content #block-adchallenge-content .view-content .views-row .node__links li a:after {
+  position: absolute;
+  margin-left: 0.5em;
+  margin-top: 3px;
+  content: ">";
+  color: #0097A7;
+}
+.region.region-content #block-latest-event {
+  padding: 5em 10em;
+  background-color: #161E21;
+}
+.region.region-content #block-latest-event #challenge-event {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.region.region-content #block-latest-event #challenge-event .img-left {
+  width: 33%;
+}
+.region.region-content #block-latest-event #challenge-event .img-left img {
+  height: 100%;
+  width: 100%;
+}
+.region.region-content #block-latest-event #challenge-event .content-right {
+  margin-left: 2em;
+  flex: 1;
+}
+.region.region-content #block-latest-event #challenge-event .content-right > h2 {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 100;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.75em;
+}
+.region.region-content #block-latest-event #challenge-event .content-right > h2:after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #0097A7;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.region.region-content #block-latest-event #challenge-event .content-right p {
+  color: #949494;
+  font-size: 0.75em;
+  padding-bottom: 2em;
+  line-height: 2em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.region.region-content #block-about-me {
+  padding: 5em 10em;
+}
+.region.region-content #block-about-me #challenge-about-me {
+  display: flex;
+  align-items: center;
+}
+.region.region-content #block-about-me #challenge-about-me .content-left {
+  flex: 1;
+  z-index: 2;
+}
+.region.region-content #block-about-me #challenge-about-me .content-left > h2 {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 100;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.75em;
+}
+.region.region-content #block-about-me #challenge-about-me .content-left > h2:after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #0097A7;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.region.region-content #block-about-me #challenge-about-me .content-left p {
+  color: #949494;
+  font-size: 0.75em;
+  padding-bottom: 2em;
+  line-height: 2em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.region.region-content #block-about-me #challenge-about-me .img-right {
+  flex: 1;
+  position: relative;
+  margin-left: 2em;
+}
+.region.region-content #block-about-me #challenge-about-me .img-right::before {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  content: " ";
+  margin-left: -75px;
+  margin-top: -50px;
+  background-color: #0F2123;
+  z-index: 1;
+}
+.region.region-content #block-about-me #challenge-about-me .img-right::after {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  content: " ";
+  right: -40px;
+  bottom: -40px;
+  transform: rotate(45deg);
+  background-color: #1D1524;
+  z-index: 1;
+}
+.region.region-content #block-about-me #challenge-about-me .img-right img {
+  width: 100%;
+  height: 100%;
+}
+.region.region-content #block-about-me #challenge-about-me .img-right div {
+  z-index: 100;
+  position: relative;
+}
+.region.region-footer #block-footer {
+  background-color: #0F2123;
+  padding: 0.25em 0;
+}
+.region.region-footer #block-footer .menu {
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+}
+.region.region-footer #block-footer .menu .menu-item:nth-child(even) {
+  margin: 0 2em;
+}
+.region.region-footer #block-footer .menu .menu-item a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #949494;
+  font-size: 0.75em;
+}
+.region.region-footer #block-footercreated {
+  background-color: #1E2C2E;
+}
+.region.region-footer #block-footercreated p {
+  margin: 0;
+  text-align: center;
+  color: #949494;
+  font-size: 0.65em;
+  padding: 1em 0;
+}
+.region.region-footer #block-footercreated p a {
+  color: #949494;
+}
+
+@media screen and (max-width: 900px) {
+  .region.region-header {
+    padding: 1em 2em;
+  }
+  .region.region-content #block-adchallenge-content {
+    padding: 2em;
+  }
+  .region.region-content #block-latest-event {
+    padding: 2em;
+  }
+  .region.region-content #block-about-me {
+    padding: 2em;
+  }
+  .region.region-content #block-about-me #challenge-about-me .img-right::before {
+    display: none;
+  }
+  .region.region-content #block-about-me #challenge-about-me .img-right::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .region.region-header .menu {
+    margin-left: 0;
+  }
+  .region.region-content #block-latest-event {
+    padding: 2em;
+  }
+  .region.region-content #block-latest-event .container {
+    flex-direction: column;
+  }
+  .region.region-content #block-latest-event #challenge-event .img-left {
+    width: 100%;
+  }
+  .region.region-content #block-latest-event #challenge-event .content-right {
+    margin-left: 0;
+    margin-top: 1em;
+  }
+  .region.region-content #block-latest-event #challenge-event .content-right p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .region.region-content #block-adchallenge-content {
+    padding: 2em;
+  }
+  .region.region-content #block-adchallenge-content .view-content {
+    flex-direction: column;
+  }
+  .region.region-content #block-adchallenge-content .view-content .views-row:nth-child(even) {
+    margin: 2em 0;
+  }
+  .region.region-content #block-about-me {
+    padding: 2em;
+  }
+  .region.region-content #block-about-me #challenge-about-me {
+    flex-direction: column;
+  }
+  .region.region-content #block-about-me #challenge-about-me .img-right {
+    margin-left: 0;
+    margin-top: 1em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

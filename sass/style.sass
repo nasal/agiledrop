@@ -14,9 +14,6 @@ $mediumgray: #949494
   &:nth-child(#{$n})
     margin: 2em 0
 
-html
-  scroll-behavior: smooth
-
 body
   color: $white
   background-color: $black
@@ -125,6 +122,7 @@ header
       padding: 5em 10em
 
       & > h2
+        margin-top: 0
         text-transform: uppercase
         font-weight: 100
         display: inline-block
@@ -150,17 +148,17 @@ header
             border: transparent
             padding-bottom: 0
             margin-bottom: .25em
+            font-size: 1.1em
 
             a
               color: $white
               text-decoration: none
               text-transform: capitalize
-              font-size: 1em
               font-weight: bold
 
           .createdDate
             color: $mediumgray
-            font-size: 0.5em
+            font-size: 0.6em
             padding-bottom: 2em
 
           .field
@@ -168,14 +166,15 @@ header
               width: 100%
               height: 100%
 
-          .clearfix
             p
               color: $mediumgray
               font-size: 0.75em
               line-height: 2em
+              margin-bottom: 0
+              padding-bottom: 0
 
           .node__links
-            margin-top: 1em
+            margin-top: 1.5em
 
             li
               padding-left: 0
@@ -183,23 +182,25 @@ header
               a
                 color: $white
                 text-decoration: none
-                font-size: .9em
+                font-size: .8em
 
-              a:hover:after
-                color: $red
+                &:hover:after
+                  color: $red
 
-              a:after
-                position: absolute
-                padding-left: 0.25em
-                content: ">"
-                color: $blue
+                &:after
+                  position: absolute
+                  margin-left: 0.5em
+                  margin-top: 3px
+                  content: ">"
+                  color: $blue
 
     #block-latest-event
+      padding: 5em 10em
+      background-color: $darkblue
+
       #challenge-event
-        padding: 5em 10em
         display: flex
         justify-content: space-around
-        background-color: $darkblue
         align-items: center
 
         .img-left
@@ -214,6 +215,7 @@ header
           flex: 1
 
           & > h2
+            margin-top: 0
             text-transform: uppercase
             font-weight: 100
             display: inline-block
@@ -234,6 +236,8 @@ header
             font-size: 0.75em
             padding-bottom: 2em
             line-height: 2em
+            margin-bottom: 0
+            padding-bottom: 0
 
     #block-about-me
       padding: 5em 10em
@@ -247,6 +251,7 @@ header
           z-index: 2
 
           & > h2
+            margin-top: 0
             text-transform: uppercase
             font-weight: 100
             display: inline-block
@@ -262,12 +267,13 @@ header
               left: 0
               bottom: 0
 
-          .clearfix
-            p
-              color: $mediumgray
-              font-size: 0.75em
-              padding-bottom: 2em
-              line-height: 2em
+          p
+            color: $mediumgray
+            font-size: 0.75em
+            padding-bottom: 2em
+            line-height: 2em
+            margin-bottom: 0
+            padding-bottom: 0
 
         .img-right
           flex: 1
@@ -340,17 +346,38 @@ header
     &.region-header
       padding: 1em 2em
 
+    &.region-content
+      #block-adchallenge-content
+        padding: 2em
+
+      #block-latest-event
+        padding: 2em
+
+      #block-about-me
+        padding: 2em
+
+        #challenge-about-me
+          .img-right
+            &::before
+              display: none
+
+            &::after
+              display: none
+
+@media screen and (max-width: 700px)
+  .region
+    &.region-header
       .menu
         margin-left: 0
 
     &.region-content
       #block-latest-event
+        padding: 2em
+
         .container
           flex-direction: column
 
         #challenge-event
-          padding: 2em
-
           .img-left
             width: 100%
 
