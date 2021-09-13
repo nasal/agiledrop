@@ -5,10 +5,15 @@ for (const link of links) {
 }
 
 function clickHandler(e) {
-  console.log('asdf')
   e.preventDefault();
   const href = this.getAttribute('href');
   const offsetTop = document.querySelector(href).offsetTop;
+
+  for (const link of links) {
+    link.classList.remove('active')
+  }
+
+  e.target.classList.add('active')
 
   scroll({
     top: offsetTop,
