@@ -24,7 +24,7 @@ header
   left: 0
   top: 0
   width: 100%
-  z-index: 10
+  z-index: 1000
 
 .region
   &.region-header
@@ -64,7 +64,7 @@ header
           font-size: 0.75em
           padding-bottom: 0.5em
 
-          &:hover, &:focus, &.active
+          &:hover, &.active
             border-bottom-color: $blue
 
   &.region-content
@@ -346,6 +346,8 @@ header
     &.region-header
       padding: 1em 2em
 
+
+
     &.region-content
       #block-adchallenge-content
         padding: 2em
@@ -369,6 +371,13 @@ header
     &.region-header
       .menu
         margin-left: 0
+
+      #block-adchallenge-branding
+        display: flex
+        align-items: center
+
+      .site-slogan
+        display: none
 
     &.region-content
       #block-latest-event

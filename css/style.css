@@ -9,7 +9,7 @@ header {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .region.region-header {
@@ -48,7 +48,7 @@ header {
   font-size: 0.75em;
   padding-bottom: 0.5em;
 }
-.region.region-header .menu .menu-item a:hover, .region.region-header .menu .menu-item a:focus, .region.region-header .menu .menu-item a.active {
+.region.region-header .menu .menu-item a:hover, .region.region-header .menu .menu-item a.active {
   border-bottom-color: #0097A7;
 }
 .region.region-content #block-top-content-header {
@@ -346,6 +346,13 @@ header {
 @media screen and (max-width: 700px) {
   .region.region-header .menu {
     margin-left: 0;
+  }
+  .region.region-header #block-adchallenge-branding {
+    display: flex;
+    align-items: center;
+  }
+  .region.region-header .site-slogan {
+    display: none;
   }
   .region.region-content #block-latest-event {
     padding: 2em;
