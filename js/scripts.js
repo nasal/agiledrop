@@ -6,18 +6,16 @@ const about = document.getElementById('block-about-me')
 const menuOffset = header.offsetHeight
 let scrollPos = window.scrollY;
 
-(function() {
-  links[0].classList.add('active');
-})();
-
-for (const link of links) {
-  link.addEventListener('click', clickHandler);
-}
-
 function clickHandler(e) {
   e.preventDefault();
   const href = this.getAttribute('href');
-  const offsetTop = document.querySelector(href).offsetTop;
+  const hrefSelector = document.querySelector(href)
+  // The news link does not have the href set to an existing element on the page,
+  // so we check this to make sure JS doesn't throw. I fixed this locally by changing the
+  // href value in the Drupal database to #block-adchallenge-content.
+  if (!hrefSelector) return
+
+  const offsetTop = hrefSelector.offsetTop;
 
   scroll({
     top: offsetTop,
@@ -26,6 +24,8 @@ function clickHandler(e) {
 }
 
 function activateOnScroll(el) {
+  if (!el) return
+
   el.classList.add('active');
 }
 
@@ -35,7 +35,7 @@ function deactivateOnScroll() {
   }
 }
 
-window.addEventListener('scroll', function() {
+function scrollHandler() {
   const [homeMenu, newsMenu, eventMenu, aboutMenu] = links;
   scrollPos = window.scrollY;
   deactivateOnScroll();
@@ -52,4 +52,16 @@ window.addEventListener('scroll', function() {
   else {
     activateOnScroll(aboutMenu);
   }
-});
+}
+
+(function() {
+  links[0].classList.add('active');
+
+  for (const link of links) {
+    link.addEventListener('click', clickHandler);
+  }
+})();
+
+window.addEventListener('scroll', scrollHandler);
+
+
